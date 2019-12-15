@@ -1,0 +1,644 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    /* text-shadow: 2px 1px 2px #000; */
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 800;
+    margin: auto;
+}
+
+/* section barre de nav */
+#navigation{
+    position: fixed !important; /* menu reste fixe */
+    z-index: 40 !important; /* permet de faire des couches */
+    width: 100% !important; /* largeur 100% */
+    background-color: rgb(142, 128, 129) !important;
+    text-align: center !important;
+    height: 10rem !important; /* hauteur de 10rem = 100px */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 55% 70%, 50% 90%, 45% 70%, 0% 70%) !important;
+    transition: all 0.4s ease-in-out !important; /* transition de 0.4s et rapide au début normal au milieux et rapide a la fin */
+
+}
+
+#navigation a{
+    text-decoration: none !important;
+    font-size: 1.3rem !important;
+    padding: 1rem 1rem !important;
+    line-height: 8.5rem !important;
+    font-family: 'Kaushan Script'!important;
+    margin: auto !important;
+    color: #fff !important;
+    text-shadow: 2px 1px 2px #000;
+}
+
+#navigation a:active{
+    font-size: 4rem !important;    
+}
+
+/* section accueil */
+
+#accueil{
+    padding: 128px 0;
+    background: url('../../sources/images/mockup.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* height: 400px auto; */
+    
+    position: relative;
+    padding-top: 30px auto;
+    padding-bottom: 10%;
+
+    margin-top: -20px;
+    text-shadow: 2px 1px 2px #000;
+    
+    color: #fff;    
+
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#accueil h1 {
+  padding-top: 5rem;
+}
+
+#moi {
+    border-radius: 70%;
+    filter: contrast(80%);
+    -webkit-filter: contrast(80%);
+    margin-top: 4rem;
+}
+
+#moi:hover{
+    filter: contrast(100%);
+    -webkit-filter: contrast(100%);
+}
+
+/* section presentation */
+
+#presentation{
+    color: white;
+    background: url('../../sources/images/ordi.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: block;
+    padding: 50px;
+   
+  
+    margin: 0 auto;  
+
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+ 
+    margin: 0rem 0 2rem 0;
+    right: 0;
+    border: 1px outset rgba(255, 255, 255, 0);
+
+    margin: 0px auto;
+    padding-right: 2rem;
+    text-shadow: 2px 1px 2px #000;
+}
+
+.text{
+    margin: 2rem;
+    font-size: 1.2rem;
+    background: rgba(55,55,55,0.6);
+}
+
+#presentation h2{
+    text-align: center;
+    font-size: 4rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text{
+    max-width: 100px;
+}
+
+/* section competences */
+
+#competences{
+    height: 400px auto;
+    background-size: cover;
+    background: url('../../sources/images/learn.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 10%;
+
+    margin: 0 0 0px;
+    right: 0;
+    border: 1px outset rgba(255, 255, 255, 0);  
+    color: white;
+    text-shadow: 2px 1px 2px #000; 
+}
+
+#competences h2{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+#competences .progress
+{
+    height: 100%;
+    height: 50px;
+    margin: 30px 20px;
+    background: #ddd;
+    display: flex;    
+}
+#competences .progress-bar
+{
+    background: rgb(142, 128, 129);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#competences .progress h5
+{
+    text-shadow: 1px 1px 1px #000;
+    font-size: 13px;
+}
+
+#mes_competences{
+    display: flex;
+    justify-content: space-around;    
+}
+
+#conteneur_competences1{
+    width: 500px;
+}
+
+#conteneur_competences2{
+    width: 500px;
+}
+
+/* Timeline pour les experiences professionnelles et la formation */
+.timeline{
+    background: url('../../sources/images/laptop.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    padding: 50px 0;
+    margin: 0 0 15px;
+    right: 0;
+    border: 1px outset rgba(255, 255, 255, 0);  
+    color: white;
+    text-shadow: 2px 1px 2px #000; 
+    margin: 0px auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.timeline h2{
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.timeline h4{
+  text-align: center;
+}
+
+.timeline h3{
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 1px 2px #000;
+}
+
+.timeline ul {
+   
+    padding: 50px 0;
+    /* margin: 0 0 15px; */
+    
+    border: 1px outset rgba(255, 255, 255, 0);  
+    color: white;
+    text-shadow: 2px 1px 2px #000; 
+  }
+  
+  .timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+   
+    background: #fff;
+  }
+  
+  .timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-45%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+  }
+  
+  .timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: rgb(142, 128, 129);
+  }
+  
+  .timeline ul li div::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    left: 45px;
+  }
+  
+  .timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent rgb(142, 128, 129) transparent transparent;
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    left: -439px;
+  }
+  
+  .timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent rgb(142, 128, 129);
+  }
+  
+  time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  
+  /* EFFECTS SUR TIMELINE EXPERIENCES PROFESSIONNELLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .timeline ul li::after {
+    transition: all .5s ease-in-out;
+  }
+  
+  .timeline ul li.in-view::after {
+    background: rgb(142, 128, 129);
+  }
+  
+  .timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+  }
+  
+  .timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+  }
+  
+  .timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: -465px;
+}
+  
+  
+  /* GENERAL MEDIA QUERIES SECTION EXPERIENCES PROFESSIONNELLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  @media screen and (max-width: 900px) {
+    .timeline ul li div {
+      width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+      left: -289px;
+      /*250+45-6*/
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline ul li {
+      margin-left: 20px;
+    }
+    .timeline ul li div {
+      width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+      left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+      left: -15px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent #F45B69 transparent transparent;
+    }
+  }
+
+  /* SECTION FORMATION 
+  ---------------------------------------------------------*/
+#formation{
+  background: url('../../sources/images/science.jpg')no-repeat center center fixed;
+  padding: 50px 0;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+   
+}
+
+
+/* section portfolio */
+#portfolio {
+  background: url('../../sources/images/tablette.jpg')no-repeat center center fixed;
+  height: 700px auto;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  margin: 0 0 0px;
+  right: 0;
+  border: 1px outset rgba(255, 255, 255, 0);  
+  color: white;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */   
+}
+
+#portfolio h2{
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-shadow: 2px 1px 2px #000;  
+}
+/* CREATION CARD */
+.card {
+  width: 400px; /*1*/
+  margin: 0px auto; /*2*/
+  background-color: white; /*3*/
+  box-shadow: 0px 5px 20px #999; /*4*/
+  display: flex;
+  justify-content: space-around; 
+}
+.card a { /*5*/
+  color: #333; 
+  text-decoration: none;
+}
+.card:hover .card-image img { /*6*/
+  width: 160%;
+  filter: grayscale(0);
+}
+
+.card-image {
+  height: 250px;/*1*/
+  position: relative;/*2*/
+  overflow: hidden;/*3*/
+}
+.card-image img {
+  width: 150%;/*4*/
+    /*5 - Méthode de centrage en fonction de la taille de l'image */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(1);/*6*/
+    /*7 - Transition */
+  transition-property: filter width; 
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+.card-body {
+  text-align:center;  /*1*/
+  padding: 15px 20px; /*2*/
+  box-sizing: border-box; /*3*/
+}
+
+.card-date {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card-title, .card-excerpt {
+   font-family: 'Playfair Display', serif;
+}
+
+.card-date, .card-title {
+  text-align:center;
+  text-transform:uppercase;
+  font-weight: bold;
+}
+
+.card-date, .card-excerpt {
+  color: #777;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* CONTACT */
+#hire {
+  background: url('../../sources/images/writing.jpg')no-repeat center center fixed;
+  height: 700px auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin: 0 0 0px;
+  right: 0;
+  border: 1px outset rgba(255, 255, 255, 0);  
+  color: white;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */   
+}
+
+#hire h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  text-shadow: 2px 1px 2px #000;
+}
+
+/* body {
+  background: #efefef;
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #b6b6b6;
+}
+body section {
+  background: white;
+  margin: 60px auto 120px;
+  border-top: 15px solid #313a3d;
+  text-align: center;
+  padding: 50px 0 110px;
+  width: 80%;
+  max-width: 1100px;
+} */
+body section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+
+form {
+  width: 58.3333333333%;
+  margin: 0 auto;
+  
+}
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 25px;
+  
+}
+form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #313a3d;
+  width: 115%;
+  padding: 18px 9px;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+  
+}
+form .field label + span {
+  font-family: "SSStandard";
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form .field input[type="text"],
+form .field input[type="tel"],
+form .field textarea {
+  border: none;
+  background: #e8e9ea;
+  width: 77.5%;
+  margin: 0;
+  padding: 21px 8px;
+  padding-left: 37.5%;
+  color: #313a3d;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+form .field input[type="text"]#msg,
+form .field input[type="tel"]#msg,
+form .field textarea#msg {
+  height: 26px;
+  resize: none;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form .field input[type="text"]:focus, form .field input[type="text"].focused,
+form .filed input[type="tel"]:focus, form .field input[type="tel"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+}
+form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+form .field input[type="tel"]:focus#msg, form .field input[type="tel"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+}
+form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+form .field input[type="tel"]:focus + label, form .field input[type="tel"].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  width: 35%;
+  background: #fd9638;
+  color: #313a3d;
+}
+form .field input[type="text"].focused + label,
+form .field input[type="tel"].focused + label,
+form .field textarea.focused + label {
+  color: #fd9638;
+}
+form .field:hover label {
+  width: 25%;
+  background: #313a3d;
+  color: white;
+}
+form input[type="submit"] {
+  background: #fd9638;
+  color: white;
+  -webkit-appearance: none;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form input[type="submit"]:hover {
+  background: #313a3d;
+  color: #fd9638;
+}
+form input[type="submit"]:focus {
+  outline: none;
+  background: #cd6302;
+}
+
+footer {
+  background-color: rgb(142, 128, 129) !important;
+  color: #fff;
+  height: 80px;
+  font-family: 'Kaushan Script'!important;
+  margin: auto !important;
+  color: #fff !important;
+  text-shadow: 2px 1px 2px #000;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 1rem;
+}
