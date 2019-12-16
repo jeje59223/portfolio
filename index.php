@@ -1,5 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +20,7 @@
         <a href="#portfolio">PortFolio</a>        
         <a href="#hire">Contact</a>
     </nav>
-    <header id="accueil">        
+        <header id="accueil">        
         <h1>Hello, I'm Jérôme ! <br/>
         Développeur PHP / SYMFONY</h1>
         <img id="moi" src="sources/images/moi.jpg" alt="Photo de Jérôme Cnockaert">
@@ -206,16 +208,18 @@
             
                         <!-- Date de publication de l'article-->
                         <div class="card-date">
-                            <time>20 Novembre 2019</time>
+                            <time>Novembre 2019</time>
                         </div>
             
                         <!-- Titre de l'article -->
                         <div class="card-title">
-                            <h3>Lorem Ipsum</h3>
+                            <h3>BurgerCode</h3>
                         </div>
                         <!-- Extrait de l'article -->
                         <div class="card-excerpt">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                            <p> Site pour afficher les menus d'un restaurant avec une partie administrateur afin d'ajouter, de modifier ou de supprimmer un menu.
+                                Il a été développé en HTML, CSS, Bootstrap et PHP.
+                            </p>
                         </div>
             
                     </div>
@@ -225,7 +229,7 @@
             <div class="card">
                 <a href="#">
                     <!-- Image à la une -->
-                    <div class="card-image"><img src="sources/images/cv.png" alt="Orange" /></div>
+                    <div class="card-image"><img src="sources/images/julo.png" alt="Orange" /></div>
                     <!-- Fin de l'image à la une -->
             
                     <!-- Corp de notre carte -->
@@ -233,16 +237,16 @@
             
                         <!-- Date de publication de l'article-->
                         <div class="card-date">
-                            <time>20 Novembre 2019</time>
+                            <time>Septembre 2019</time>
                         </div>
             
                         <!-- Titre de l'article -->
                         <div class="card-title">
-                            <h3>Lorem Ipsum</h3>
+                            <h3>Julo Photo</h3>
                         </div>
                         <!-- Extrait de l'article -->
                         <div class="card-excerpt">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                            <p> Site pour un photographe développé en septembre 2019, il a été développé en HTML, CSS, Bootstrap, JavaScript et PHP.</p>
                         </div>
             
                     </div>
@@ -260,16 +264,16 @@
             
                         <!-- Date de publication de l'article-->
                         <div class="card-date">
-                            <time>20 Novembre 2019</time>
+                            <time>Août 2019</time>
                         </div>
             
                         <!-- Titre de l'article -->
                         <div class="card-title">
-                            <h3>Lorem Ipsum</h3>
+                            <h3>Travel Agency</h3>
                         </div>
                         <!-- Extrait de l'article -->
                         <div class="card-excerpt">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam voluptatibus autem consectetur voluptate facere at, omnis ab optio placeat officiis! Animi modi harum enim quia veniam consectetur unde autem inventore.</p>
+                            <p> Site de réservation de vacances. Uniquement partie front-end, développé en HTML et CSS</p>
                         </div>
             
                     </div>
@@ -279,35 +283,79 @@
         </div>
     </section>
     <section id="hire">
+    <?php
+
+date_default_timezone_set('Europe/Paris');
+
+if(isset($_POST['mail'])){
+    $to = "jcnockaert@hotmail.fr";
+    $from = $_POST['mail'];
+    $object = $_POST['object'];
+
+    $message = "
+    <html>
+        <head>
+            <title>Message sur formulaire de contact de votre portfolio !</title>
+        </head>
+        <body>
+            <h2 style='color:red';>Mon Portfolio</h2>
+            <p style='font-size:2rem';> Nom et Prénom: <strong style='color:red';> " . $_POST['name'] . " " . $_POST['firstname'] . "</strong><br/>
+            Email: " . $_POST['mail'] . " <br/> 
+            Telephone: " . $_POST['phone']  . "<br/>
+            En date du: "  .date('d-m-Y à H:i:s') ."<br/> 
+            Message: " . $_POST['msg'] . "<br/>
+            </h3>
+        </body>
+    </html>                   
+    ";
+
+    $headers = "From: " . $from  . "\n";
+    $headers .= "Reply-To: My PortFolio \n";
+    $headers .= "Content-Type: text/html; charset=utf8\n";
+    
+    mail($to, $object, $message, $headers);
+?>
+    <div class="alert">    
+        <strong>Votre message a bien été envoyé !</strong><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        
+    </div>
+<?php } ?>
+
         <h2>Contact Me</h2>
         
-        <form>
+        <form method="POST" action="#hire">
+              <div class="field object-box">
+                    <input type="text" id="object" name="object" placeholder="what is the subject of the message?"/>
+                    <label for="object">Object</label>
+                    <span class="ss-icon">check</span>
+              </div>
+
               <div class="field name-box">
-                    <input type="text" id="name" placeholder="What Is Your Name?"/>
+                    <input type="text" id="name" name="name" placeholder="What Is Your Name?"/>
                     <label for="name">Name</label>
                     <span class="ss-icon">check</span>
               </div>
 
               <div class="field firstname-box">
-                <input type="text" id="firstname" required placeholder="What Is Your Firstname?"/>
+                <input type="text" id="firstname" name="firstname" required placeholder="What Is Your Firstname?"/>
                 <label for="firstname">Firstname</label>
                 <span class="ss-icon">check</span>
               </div>
 
               <div class="field phone-box">
-                <input type="tel" id="phone" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" required placeholder="What Is Your Phone Number?"/>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}.[0-9]{2}" required placeholder="What Is Your Phone Number? (00.00.00.00.00)"/>
                 <label for="phone">Phone</label>
                 <span class="ss-icon">check</span>
               </div>
     
               <div class="field email-box">
-                    <input type="text" id="email" placeholder="name@email.com"/>
-                    <label for="email">Email</label>
+                    <input type="text" id="mail" name="mail" placeholder="name@email.com"/>
+                    <label for="mail">Email</label>
                     <span class="ss-icon">check</span>
               </div>
     
               <div class="field msg-box">
-                    <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+                    <textarea id="msg" rows="4" name="msg" placeholder="Your message goes here..."></textarea>
                     <label for="msg">Msg</label>
                     <span class="ss-icon">check</span>
               </div>
@@ -316,7 +364,10 @@
       </form>
     </section>
     <footer>
-        Copyright ©CNOCKAERT Jérôme 2019
+       <p>Copyright ©CNOCKAERT Jérôme 2019</p>
+       <a href="https://www.linkedin.com/in/jerome-cnockaert-359a20181/" target="_blank"><img src="sources/images/linkedin.png" alt="logo linkedin"></a>
+       <a href="https://twitter.com/Jeje59223" target="_blank"><img src="sources/images/twitter2.png" alt="logo twitter"></a>
+       <a href="https://github.com/jeje59223" target="_blank"><img src="sources/images/github.png" alt="logo github"></a>
     </footer>
     <script type="text/javascript" src="public/js/js.js"></script>
 </body>
